@@ -1,6 +1,6 @@
 {
   "name": "include-html-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "include html file into html for webpack loader",
   "main": "index.js",
   "scripts": {
