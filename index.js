@@ -11,7 +11,7 @@ var path = require ("path");
 var loaderUtils = require ("loader-utils");
 
 module.exports = function (content) {
-  console.log(this);
+
   this.cacheable && this.cacheable ();
   
   if (/module\.exports\s?=/.test(content)) {

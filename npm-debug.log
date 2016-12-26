@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/landy/.nvm/versions/node/v6.9.2/bin/node',
+1 verbose cli   '/Users/landy/.nvm/versions/node/v6.9.2/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/www/frontend/include-html-loader',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/landy/.npm/include-html-loader/1.0.3/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/landy/.npm correctMkdir not in flight; initializing
+10 info lifecycle include-html-loader@1.0.3~prepublish: include-html-loader@1.0.3
+11 silly lifecycle include-html-loader@1.0.3~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/landy/.npm/include-html-loader/1.0.3/package.tgz',
+12 verbose tar pack   '/www/frontend/include-html-loader' ]
+13 verbose tarball /Users/landy/.npm/include-html-loader/1.0.3/package.tgz
+14 verbose folder /www/frontend/include-html-loader
+15 verbose addLocalTarball adding from inside cache /Users/landy/.npm/include-html-loader/1.0.3/package.tgz
+16 verbose correctMkdir /Users/landy/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd include-html-loader@1.0.3
+18 verbose afterAdd /Users/landy/.npm/include-html-loader/1.0.3/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/landy/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/landy/.npm/include-html-loader/1.0.3/package/package.json written
+21 silly publish { name: 'include-html-loader',
+21 silly publish   version: '1.0.3',
+21 silly publish   description: 'include html file into html for webpack loader',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   keywords: [ 'include', 'webpack', 'loader' ],
+21 silly publish   author: { name: 'linyandi' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: { 'loader-utils': '^0.2.16' },
+21 silly publish   readme: '## 安装\n````\nnpm install include-html-loader\n````\n\n## 使用\n本插件仅用于在html文档中插入其它的html文档，实现子模板的功能，在引入子模板同时，可以设置变量传入子模板，实现子模板可配置功能。\n\n#### 父模板引入时使用方式：\n- 不带参数\n````\n${require("../layout/sub.html")}\n````\n- 带参数\n````\n${require("../layout/sub.html",{"title": "this is title"})}\n````\n#### 子模板设置变量：\n````\n#{title}\n````\n## webpack配置\n\n````\nmodule.exports = {\n  entry: "bundle.js",\n  output: {\n    path: "dist"\n  },\n  module: {\n    loaders: [\n      {\n        test: /\\.html$/,\n        loader: "include-html",\n        query: {\n          root: "./src"  // 请一定配置这里，是子模板相对在项目中的相对目录\n        }\n      }\n    ]\n  }\n\n}\n````\n\n## 例子\n> parent.html\n````\n<!DocType html>\n<html>\n  <head>\n    <title>this is parent html</title>\n  </head>\n  <body>\n  ${require("./sub-1.html",{"title": "this is sub title"})}\n  </body>\n</html>\n````\n> sub-1.html\n````\n#{title}, hello, world!\n````\n\n#### 编译后结果\n> parent.html\n````\n<!DocType html>\n<html>\n  <head>\n    <title>this is parent html</title>\n  </head>\n  <body>\n  this is sub title, hello, world!\n  </body>\n</html>\n````',
+21 silly publish   readmeFilename: 'README.MD',
+21 silly publish   gitHead: '1cbfd3e0405b9fea9c75bbe0df45b049300e7886',
+21 silly publish   _id: 'include-html-loader@1.0.3',
+21 silly publish   _shasum: 'b8f4f6d6ed3fe82612d99ebfa6868e939b6f8286',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name include-html-loader
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'include-html-loader',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'include-html-loader',
+26 silly mapToRegistry   name: 'include-html-loader',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/include-html-loader
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/landy/.npm/include-html-loader/1.0.3/package.tgz
+30 verbose request uri https://registry.npmjs.org/include-html-loader
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 9:55:12 AM
+33 verbose request using bearer token for auth
+34 verbose request id 55e5a599bbf051d8
+35 http request PUT https://registry.npmjs.org/include-html-loader
+36 http 403 https://registry.npmjs.org/include-html-loader
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 26 Dec 2016 01:55:15 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-nrt6133-NRT',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1482717315.061581,VS0,VE597',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/landy/.npm/registry.npmjs.org/include-html-loader on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.3." : include-html-loader
+40 verbose stack     at makeError (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/landy/.nvm/versions/node/v6.9.2/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid include-html-loader
+43 verbose cwd /www/frontend/include-html-loader
+44 error Darwin 15.4.0
+45 error argv "/Users/landy/.nvm/versions/node/v6.9.2/bin/node" "/Users/landy/.nvm/versions/node/v6.9.2/bin/npm" "publish"
+46 error node v6.9.2
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.3." : include-html-loader
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
